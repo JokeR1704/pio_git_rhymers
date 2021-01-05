@@ -9,6 +9,7 @@ public class RhymersJUnitTest {
 	public static final int STACK_CAPACITY = 12;
 	public static final int FIRST_ELEMENT = 0;
 	public static final int EMPTY_INDEX_VALUE = -1;
+	public static final int OSIEM_OSIEM_OSIEM = 888;
 
 	@Test
 	public void testCountIn() {
@@ -26,7 +27,7 @@ public class RhymersJUnitTest {
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
-		rhymer.countIn(888);
+		rhymer.countIn(OSIEM_OSIEM_OSIEM);
 
 		result = rhymer.callCheck();
 		Assert.assertEquals(false, result);
@@ -39,7 +40,7 @@ public class RhymersJUnitTest {
 		for (int i = FIRST_ELEMENT; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
-			rhymer.countIn(888);
+			rhymer.countIn(OSIEM_OSIEM_OSIEM);
 		}
 
 		boolean result = rhymer.isFull();
